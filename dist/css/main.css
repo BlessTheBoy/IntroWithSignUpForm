@@ -29,6 +29,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 
 body .intro {
@@ -86,6 +87,14 @@ body .form-container .form {
 body .form-container .form .input-container {
   margin-bottom: 5px;
   position: relative;
+}
+
+body .form-container .form .input-container input:-webkit-autofill,
+body .form-container .form .input-container input:-webkit-autofill:hover,
+body .form-container .form .input-container input:-webkit-autofill:focus,
+body .form-container .form .input-container input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+          box-shadow: 0 0 0 30px white inset !important;
 }
 
 body .form-container .form .input-container input {
@@ -202,5 +211,76 @@ body footer .svg {
 
 body footer .svg:hover {
   fill: #6055a5;
+}
+
+@media screen and (max-width: 700px) {
+  body .intro .heading {
+    font-size: 2rem;
+  }
+  body .intro .text {
+    font-size: 0.6rem;
+  }
+  body .form-container .free-trial {
+    font-size: .6rem;
+  }
+  body .form-container .form .input-container {
+    margin-bottom: 3px;
+  }
+  body .form-container .form .input-container input {
+    height: 30px;
+    font-size: 0.7rem;
+  }
+  body .form-container .form .input-container i {
+    position: absolute;
+    right: 6%;
+    top: 7px;
+  }
+  body .form-container .form .input-container small {
+    font-size: 0.5rem;
+  }
+  body .form-container .form button {
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
+    background-repeat: repeat;
+    background-attachment: initial;
+    background-position: initial;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+  }
+  body .intro {
+    width: 80%;
+    margin: 80px 0px 40px;
+  }
+  body .intro .heading {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  body .form-container {
+    width: 80%;
+    margin: 0 0 80px;
+  }
+  body .form-container .form-footer .terms {
+    white-space: nowrap;
+  }
+  body footer p.attribution {
+    font-size: .55rem;
+    padding: 0 10px;
+  }
+  body footer .svg {
+    width: 15%;
+    margin-bottom: -7px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
