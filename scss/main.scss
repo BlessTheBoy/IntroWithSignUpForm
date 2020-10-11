@@ -1,0 +1,172 @@
+@import 'reset';
+
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$DarkBlue: hsl(249, 10%, 26%);
+$GrayishBlue: hsl(246, 25%, 77%);
+$Shadow: 0px 4px 1px 0px rgba(0,0,0,0.2);
+
+body{
+    background-image: url('../images/bg-intro-desktop.png');
+    background-color: $Red;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+
+    .intro{
+        margin: 2.5%;
+        color: white;
+        width: 35%;
+        .heading{
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .text{
+            font-size: 0.8rem;
+            font-weight: 400;
+        }        
+    }
+
+    .form-container{
+        margin: 2.5%;
+        width: 35%;
+
+        .free-trial{
+            text-align: center;
+            color: white;
+            font-size: .8rem;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            background-color: $Blue;
+            font-weight: 400;
+            color: $GrayishBlue;
+            box-shadow: $Shadow;
+            margin-bottom: 20px;
+
+            span{
+                font-weight: 600;
+                color: white;
+            }
+        }
+
+        .form{
+            width: 100%;
+            padding: 8%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: $Shadow;
+
+            .input-container{
+                margin-bottom: 5px;
+                position: relative;
+                input{
+                    width: 100%;
+                    height: 40px;
+                    border: 1px solid $GrayishBlue;
+                    border-radius: 4px;
+                    background: transparent;
+                    outline: none;
+                    padding-left: 20px;
+                    color: $DarkBlue;
+                    font-weight: 600;
+                    font-size: 0.75rem;
+
+                    &:focus, &:hover{
+                        border-color: $Blue;
+                    }
+                }
+                
+                i{
+                    visibility: hidden;
+                    position: absolute;
+                    right: 6%;
+                    top: 13px;
+                }
+
+                small{
+                    visibility: hidden;
+                    display: block;
+                    width: 100%;
+                    text-align: right;
+                    color: $Red;
+                    font-size: 0.55rem;
+                    margin-top: 3px;
+                    font-weight: 500;
+                }
+            }
+
+            .input-container.error{
+                input{
+                    border-color: $Red;
+                    color: $Red;
+                    &:focus{
+                        color: initial;
+                    }
+                }
+                i.error{
+                    visibility: visible;
+                    color: $Red;
+                }
+                small{
+                    visibility: visible;
+                }                
+            }
+
+            .input-container.success{
+                input{
+                    border-color: $Green;
+                }
+
+                i.success{
+                    visibility: visible;
+                    color: $Green;
+                }
+            }
+
+            button{
+                width: 100%;
+                height: 40px;
+                border: 1px solid $Green;
+                border-radius: 4px;
+                background: $Green;
+                outline: none;
+                color: white;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 0.7rem;
+                letter-spacing: 1.5px;
+                box-shadow: $Shadow;
+                margin-bottom: 15px;
+            }
+
+            &-footer{
+                color: $GrayishBlue;
+                font-size: .5rem;
+                text-align: center;
+
+                span{
+                    font-weight: bold;
+                    color: $Red;
+                }
+            }
+        }
+    }
+
+    footer{
+        position: absolute;
+        bottom: 10px;
+        margin: 0 auto;
+    }
+}
